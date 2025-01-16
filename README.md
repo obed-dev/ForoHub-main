@@ -32,15 +32,13 @@ Responses:
 
 200 OK: Devuelve el token JWT generado.
 json
-Copiar
-Editar
+
 {
   "token": "string"
 }
 401 Unauthorized: Credenciales inválidas.
 json
-Copiar
-Editar
+
 "Credenciales inválidas"
 📝 Gestión de Tópicos
 POST /topicos
@@ -49,8 +47,7 @@ Crea un nuevo tópico.
 Request Body:
 
 json
-Copiar
-Editar
+
 {
   "titulo": "string",
   "mensaje": "string",
@@ -60,13 +57,11 @@ Responses:
 
 200 OK: Tópico creado con éxito.
 json
-Copiar
-Editar
+
 "Tópico creado con éxito"
 409 Conflict: Ya existe un tópico con el mismo título y mensaje.
 json
-Copiar
-Editar
+
 "Ya existe un tópico con el mismo título y mensaje"
 GET /topicos
 Obtiene una lista paginada de tópicos activos.
@@ -85,8 +80,7 @@ Responses:
 
 200 OK: Detalles del tópico.
 json
-Copiar
-Editar
+
 {
   "id": "number",
   "titulo": "string",
@@ -104,8 +98,7 @@ Actualiza un tópico existente.
 Request Body:
 
 json
-Copiar
-Editar
+
 {
   "id": "number",
   "titulo": "string",
@@ -116,8 +109,7 @@ Responses:
 
 200 OK: Tópico actualizado con éxito.
 json
-Copiar
-Editar
+
 {
   "id": "number",
   "titulo": "string",
@@ -131,8 +123,7 @@ Editar
 }
 400 Bad Request: No se puede actualizar un tópico inactivo.
 json
-Copiar
-Editar
+
 "No se puede actualizar un tópico inactivo"
 DELETE /topicos/{id}
 Desactiva un tópico por su ID.
@@ -153,8 +144,7 @@ Crea un nuevo usuario.
 Request Body:
 
 json
-Copiar
-Editar
+
 {
   "userName": "string",
   "clave": "string"
@@ -163,13 +153,11 @@ Responses:
 
 200 OK: Usuario creado con éxito.
 json
-Copiar
-Editar
+
 "Usuario creado con éxito"
 400 Bad Request: El nombre de usuario ya está registrado.
 json
-Copiar
-Editar
+
 "El nombre de usuario ya está registrado"
 🔧 Configuración de Variables de Entorno
 La aplicación utiliza varias variables de entorno para gestionar su configuración. Es importante establecer estas variables antes de ejecutar la aplicación para garantizar su correcto funcionamiento.
@@ -202,4 +190,7 @@ Authorization: Bearer <token>
 Asegúrate de validar los datos enviados al servidor para evitar errores de validación.
 
 Los objetos DTO se utilizan para estructurar y validar los datos de entrada y salida.
+
+
+Proyecto desarrollado por Obed Baltodano
 
